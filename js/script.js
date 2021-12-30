@@ -3,9 +3,9 @@ function computerPlay() {
     const randInt = Math.floor(Math.random() * 3) + 1; //random number between 1, 2 and 3
     let computerPlay = undefined;
 
-    if (randInt == 1) computerPlay = "Rock";
-    else if (randInt == 2) computerPlay = "Paper";
-    else if (randInt == 3) computerPlay = "Scissors";
+    if (randInt == 1) computerPlay = "rock";
+    else if (randInt == 2) computerPlay = "paper";
+    else if (randInt == 3) computerPlay = "scissors";
     return computerPlay;
 }
 
@@ -14,7 +14,6 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == null || playerSelection == undefined) return "Exit"; //checking if player selection is null or undefined
 
     playerSelection = playerSelection.toLowerCase(); //conversion of all types of inputs to lowercase
-    computerSelection = computerSelection.toLowerCase();
 
     if (playerSelection == computerSelection) return "Round Draw!";
 
