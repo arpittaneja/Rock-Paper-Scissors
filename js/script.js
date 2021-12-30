@@ -85,5 +85,5 @@ Score after all rounds:
 Your Score: ${playerScore} 
 Computer Score: ${computerScore}`)
 }
-
+//calling the main game function
 game();
