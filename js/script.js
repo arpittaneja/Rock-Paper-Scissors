@@ -58,9 +58,16 @@ Computer Score: ${computerScore}`);
     }
 
     //displays result if match
-    if (playerScore > computerScore) window.alert("You Won this match!")
-    else if (computerScore > playerScore) window.alert("You lost this match!")
-    else window.alert("Match Drawn")
+    if (playerScore > computerScore) window.alert(`You Won this match!
+Your Score: ${playerScore} 
+Computer Score: ${computerScore}`)
+    else if (computerScore > playerScore) window.alert(`You lost this match!
+Your Score: ${playerScore} 
+Computer Score: ${computerScore}`)
+    else window.alert(`Match Drawn
+    
+Your Score: ${playerScore} 
+Computer Score: ${computerScore}`)
 }
 
 game();
