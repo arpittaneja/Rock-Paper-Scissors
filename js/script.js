@@ -9,7 +9,7 @@ function computerPlay() {
     return computerPlay;
 }
 
-//function to decide the outcome of each round
+//function to decide and return the outcome of each round
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == null || playerSelection == undefined) return "Exit"; //checking if player selection is null or undefined
 
@@ -37,7 +37,7 @@ function game() {
     //loop until round number is not equal to six
     while (roundNumber != 6) {
         //prompt for user input
-        const playerSelection = window.prompt(`Round ${roundNumber}
+        const playerSelection = prompt(`Round ${roundNumber}
 
 Rock, Paper, Scissors?`);
 
@@ -51,32 +51,33 @@ Rock, Paper, Scissors?`);
         else roundNumber = roundNumber;
 
         //displays scores after each round
-        window.alert(`${result}
+        alert(`${result}
 
 Your Score: ${playerScore} 
 Computer Score: ${computerScore}`);
     }
 
     //displays result of match
-    if (playerScore > computerScore) window.alert(`You won this match!
+    if (playerScore > computerScore) alert(`You won this match!
 
 Score after all rounds:
 Your Score: ${playerScore} 
 Computer Score: ${computerScore}`)
         
         
-    else if (computerScore > playerScore) window.alert(`You lost this match!
+    else if (computerScore > playerScore) alert(`You lost this match!
 
 Score after all rounds:
 Your Score: ${playerScore} 
 Computer Score: ${computerScore}`)
         
         
-    else window.alert(`Match Drawn!
+    else alert(`Match Drawn!
 
 Score after all rounds:
 Your Score: ${playerScore} 
 Computer Score: ${computerScore}`)
 }
+
 //calling the main game function
 game();
