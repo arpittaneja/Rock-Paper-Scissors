@@ -16,7 +16,7 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase(); //conversion of all types of inputs to lowercase
     computerSelection = computerSelection.toLowerCase();
 
-    if (playerSelection == computerSelection) return "Round Draw";
+    if (playerSelection == computerSelection) return "Round Draw!";
 
     else if (playerSelection == "rock" && computerSelection == "paper") return "You Lose! Paper defeats Rock!";
 
@@ -54,7 +54,7 @@ Rock, Paper, Scissors?`);
 
         if (result.startsWith("You Win!")) playerScore++, roundNumber++;
         else if (result.startsWith("You Lose!")) computerScore++, roundNumber++;
-        else if (result.startsWith("Round Draw")) roundNumber++;
+        else if (result.startsWith("Round Draw!")) roundNumber++;
         else if (result == "Exit") break;
         else roundNumber = roundNumber;
 
