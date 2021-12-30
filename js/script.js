@@ -65,7 +65,7 @@ Your Score: ${playerScore}
 Computer Score: ${computerScore}`);
     }
 
-    //displays result if match
+    //displays result of match
     if (playerScore > computerScore) window.alert(`You Won this match!
 
 Score after 5 rounds:
