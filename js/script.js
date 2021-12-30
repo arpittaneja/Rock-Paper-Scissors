@@ -31,25 +31,30 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection == "scissors" && computerSelection == "rock") return "You Lose! Rock defeat Scissors"
 
     else if (playerSelection == "scissors" && computerSelection == "paper") return "You Win! Scissors defeat Paper";
+
+    else return "Please enter a valid move!";
 }
 
 //main function which loops each round five times
 function game() {
     let playerScore = 0;
     let computerScore = 0;
+    let roundNumber = 1;
 
-    for (let i = 0; i < 5; i++) {
+    while (roundNumber != 6) {
         //prompt for user input
-        const playerSelection = window.prompt(`Round ${i + 1}  
+        const playerSelection = window.prompt(`Round ${roundNumber}
 
-Rock, Paper, Scissors?`); 
-        
+Rock, Paper, Scissors?`);
+
         const computerSelection = computerPlay();
         const result = playRound(playerSelection, computerSelection);
 
         //displays scores after each round
-        if (result.slice(0, 8) == "You Win!") playerScore++;
-        else if (result.slice(0, 9) == "You Lose!") computerScore++;
+        if (result.slice(0, 8) == "You Win!") playerScore++, roundNumber++;
+        else if (result.slice(0, 9) == "You Lose!") computerScore++, roundNumber++;
+        else if (result.slice(0, 10) == "Round Draw") roundNumber++;
+        else roundNumber = roundNumber;
         window.alert(`${result}
 
 Your Score: ${playerScore} 
@@ -58,13 +63,18 @@ Computer Score: ${computerScore}`);
 
     //displays result if match
     if (playerScore > computerScore) window.alert(`You Won this match!
+
+Score after 5 rounds:
 Your Score: ${playerScore} 
 Computer Score: ${computerScore}`)
     else if (computerScore > playerScore) window.alert(`You lost this match!
+
+Score after 5 rounds:
 Your Score: ${playerScore} 
 Computer Score: ${computerScore}`)
     else window.alert(`Match Drawn
 
+Score after 5 rounds:
 Your Score: ${playerScore} 
 Computer Score: ${computerScore}`)
 }
