@@ -37,10 +37,14 @@ function playRound(playerSelection, computerSelection) {
 
 //main function which loops each round five times
 function game() {
-    let playerScore = 0;
+    //initializing scores to zero
+    let playerScore = 0; 
     let computerScore = 0;
+
+    //initializing round number to 1
     let roundNumber = 1;
 
+    //loop until round number is not equal to six
     while (roundNumber != 6) {
         //prompt for user input
         const playerSelection = window.prompt(`Round ${roundNumber}
