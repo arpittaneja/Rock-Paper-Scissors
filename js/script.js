@@ -50,7 +50,6 @@ Rock, Paper, Scissors?`);
         //displays scores after each round
         if (result.slice(0, 8) == "You Win!") playerScore++;
         else if (result.slice(0, 9) == "You Lose!") computerScore++;
-        window.alert(computerSelection);
         window.alert(`${result}
 
 Your Score: ${playerScore} 
@@ -65,7 +64,7 @@ Computer Score: ${computerScore}`)
 Your Score: ${playerScore} 
 Computer Score: ${computerScore}`)
     else window.alert(`Match Drawn
-    
+
 Your Score: ${playerScore} 
 Computer Score: ${computerScore}`)
 }
