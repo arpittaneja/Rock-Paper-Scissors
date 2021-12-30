@@ -11,6 +11,8 @@ function computerPlay() {
 
 //function to decide the outcome of each round
 function playRound(playerSelection, computerSelection) {
+    if (playerSelection == null || playerSelection == undefined) return "Exit"; //checking if player selection is null or undefined
+
     playerSelection = playerSelection.toLowerCase(); //conversion of all types of inputs to lowercase
     computerSelection = computerSelection.toLowerCase();
 
@@ -58,6 +60,7 @@ Rock, Paper, Scissors?`);
         if (result.slice(0, 8) == "You Win!") playerScore++, roundNumber++;
         else if (result.slice(0, 9) == "You Lose!") computerScore++, roundNumber++;
         else if (result.slice(0, 10) == "Round Draw") roundNumber++;
+        else if (result == "Exit") break;
         else roundNumber = roundNumber;
         window.alert(`${result}
 
