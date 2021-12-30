@@ -16,19 +16,15 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase(); //conversion of all types of inputs to lowercase
     computerSelection = computerSelection.toLowerCase();
 
-    if (playerSelection == "rock" && computerSelection == "rock") return "Round Draw";
+    if (playerSelection == computerSelection) return "Round Draw";
 
     else if (playerSelection == "rock" && computerSelection == "paper") return "You Lose! Paper defeats Rock!";
 
     else if (playerSelection == "rock" && computerSelection == "scissors") return "You Win! Rock defeats Scissors!";
 
-    else if (playerSelection == "paper" && computerSelection == "paper") return "Round Draw";
-
     else if (playerSelection == "paper" && computerSelection == "rock") return "You Win! Paper defeats Rock!";
 
     else if (playerSelection == "paper" && computerSelection == "scissors") return "You Lose! Scissors defeats Paper";
-
-    else if (playerSelection == "scissors" && computerSelection == "scissors") return "Round Draw";
 
     else if (playerSelection == "scissors" && computerSelection == "rock") return "You Lose! Rock defeat Scissors"
 
@@ -56,12 +52,13 @@ Rock, Paper, Scissors?`);
         const computerSelection = computerPlay();
         const result = playRound(playerSelection, computerSelection);
 
-        //displays scores after each round
-        if (result.slice(0, 8) == "You Win!") playerScore++, roundNumber++;
-        else if (result.slice(0, 9) == "You Lose!") computerScore++, roundNumber++;
-        else if (result.slice(0, 10) == "Round Draw") roundNumber++;
+        if (result.startsWith("You Win!")) playerScore++, roundNumber++;
+        else if (result.startsWith("You Lose!")) computerScore++, roundNumber++;
+        else if (result.startsWith("Round Draw")) roundNumber++;
         else if (result == "Exit") break;
         else roundNumber = roundNumber;
+
+        //displays scores after each round
         window.alert(`${result}
 
 Your Score: ${playerScore} 
@@ -69,19 +66,23 @@ Computer Score: ${computerScore}`);
     }
 
     //displays result of match
-    if (playerScore > computerScore) window.alert(`You Won this match!
+    if (playerScore > computerScore) window.alert(`You won this match!
 
-Score after 5 rounds:
+Score after all rounds:
 Your Score: ${playerScore} 
 Computer Score: ${computerScore}`)
+        
+        
     else if (computerScore > playerScore) window.alert(`You lost this match!
 
-Score after 5 rounds:
+Score after all rounds:
 Your Score: ${playerScore} 
 Computer Score: ${computerScore}`)
-    else window.alert(`Match Drawn
+        
+        
+    else window.alert(`Match Drawn!
 
-Score after 5 rounds:
+Score after all rounds:
 Your Score: ${playerScore} 
 Computer Score: ${computerScore}`)
 }
