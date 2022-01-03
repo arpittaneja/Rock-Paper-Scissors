@@ -96,17 +96,17 @@ header {
 }
 
 .button#rock {
-    background-image: url("/img/rock.png");
+    background-image: url("../img/rock.png");
     background-size: cover;
 }
 
 .button#paper {
-    background-image: url("/img/paper.png");
+    background-image: url("../img/paper.png");
     background-size: cover;
 }
 
 button#scissors {
-    background-image: url("/img/scissors.png");
+    background-image: url("../img/scissors.png");
     background-size: cover;
 }
 
