@@ -30,6 +30,9 @@ function updatePage(playerSelection) {
     const computerSelection = computerPlay();
     const result = playRound(playerSelection, computerSelection);
 
+    const resultPanel = document.querySelector(".result-panel");
+    resultPanel.innerHTML = result;
+    
     if (result.startsWith("You Win!")) {
         playerScore++;
         roundNumber++;
