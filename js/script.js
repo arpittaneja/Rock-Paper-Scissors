@@ -36,19 +36,18 @@ function updatePage(playerSelection) {
         playerScore++;
         roundNumber++;
 
-        const playerCounter = document.querySelector("div .player-score .player-score-box");
-        playerCounter.innerHTML = playerScore;
+
+        playerCounter.textContent = playerScore;
         console.log(result);
         console.log("Player Score: " + playerScore);
         console.log("Computer Score: " + computerScore);
-        }
+    }
 
     else if (result.startsWith("You Lose!")) {
         computerScore++;
         roundNumber++;
 
-        const computerCounter = document.querySelector("div .computer-score .computer-score-box");
-        computerCounter.innerHTML = computerScore;
+        computerCounter.textContent = computerScore;
         console.log(result);
         console.log("Player Score: " + playerScore);
         console.log("Computer Score: " + computerScore);
@@ -57,6 +56,32 @@ function updatePage(playerSelection) {
     else if (result.startsWith("Round Draw!")) {
         console.log(result);
         roundNumber++;
+    }
+
+    if (playerScore == 5 || computerScore == 5) {
+        console.log("stop");
+        playAgain.style.display = 'block';
+        disableSelectionButtons();
+    }
+}
+
+function disableSelectionButtons() {
+    for (button of buttons) {
+        button.disabled = true;
+    }
+}
+
+function anotherGame() {
+    playerScore = computerScore = 0;
+    playerCounter.textContent = playerScore;
+    computerCounter.textContent = computerScore;
+    playAgain.style.display = 'none';
+    enableSelectionButtons();
+}
+
+function enableSelectionButtons() {
+    for (button of buttons) {
+        button.disabled = false;
     }
 }
 
@@ -72,8 +97,17 @@ let roundNumber = 1;
 //selects an array of all buttons
 const buttons = Array.from(document.querySelectorAll(".selection"));
 
+const playerCounter = document.querySelector("div .player-score .player-score-box");
+
+
 //applies eventListener to all the buttons
 buttons.forEach(button => button.addEventListener("click", function (button) {
     const playerSelection = button.target.id;
     updatePage(playerSelection);
 }));
+
+const playAgain = document.querySelector('.again .play-again');
+playAgain.addEventListener('click', anotherGame);
+
+const computerCounter = document.querySelector("div .computer-score .computer-score-box");
+
