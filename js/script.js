@@ -8,7 +8,6 @@ function computerPlay() {
     return computerPlay;
 }
 
-
 //function to calculate and return the outcome of each case
 function playRound(playerSelection, computerSelection) {
     // if (playerSelection == null || playerSelection == undefined) return "Exit"; //checking if player selection is null or undefined
@@ -32,7 +31,7 @@ function updatePage(playerSelection) {
 
     const resultPanel = document.querySelector(".result-panel");
     resultPanel.innerHTML = result;
-    
+
     if (result.startsWith("You Win!")) {
         playerScore++;
         roundNumber++;
