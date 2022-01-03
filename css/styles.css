@@ -29,20 +29,25 @@ header {
     min-height: 200px;
     min-width: 200px;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.selection {
+.player-score-box,
+.text,
+.computer-score-box {
+    border: 1px solid red;
+}
+
+.selections {
     border: 1px solid gray;
     display: flex;
     justify-content: space-evenly;
     padding: 30px 0;
 }
 
-.selection .rock,
-.selection .paper,
-.selection .scissors {
+.selection {
     min-height: 100px;
     min-width: 100px;
 }
