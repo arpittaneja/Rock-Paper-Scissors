@@ -5,14 +5,17 @@
 body {
     padding: 0px;
     margin: 0px;
+    background-color: white;
 }
 
 header {
-    padding-top: 20px;
-    ;
+    padding: 20px 0px;
     text-align: center;
     font-size: 50px;
     border: 1px solid purple;
+    background-color: rgb(255, 253, 152);
+    font-family: 'EB Garamond', serif; 
+    font-weight: bold;
 }
 
 .result {
@@ -26,8 +29,9 @@ header {
 .result .player-score,
 .result .computer-score {
     border: 1px solid red;
-    min-height: 200px;
-    min-width: 200px;
+    border-radius: 15%;
+    height: 200px;
+    width: 200px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
@@ -37,7 +41,15 @@ header {
 .player-score-box,
 .text,
 .computer-score-box {
+    text-align: center;
     border: 1px solid red;
+    font-size: 24px;
+
+}
+
+.player-score-box,
+.computer-score-box {
+    font-size: 48px;
 }
 
 .selections {
@@ -52,7 +64,7 @@ header {
     min-width: 100px;
 }
 
-.result-panel{
+.result-panel {
     margin: 30px;
     border: 1px solid pink;
     min-height: 100px;
@@ -60,4 +72,20 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+button{
+    height: 200px;
+    width: 200px;
+}
+button#rock{
+    background-image: url(img/rock.png);
+}
+
+button#paper{
+    background-image: url(img/paper.png);
+}
+
+button#scissors{
+    background-image: url(img/scissors.png);
 }
