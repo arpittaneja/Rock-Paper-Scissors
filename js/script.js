@@ -60,6 +60,7 @@ function updatePage(playerSelection) {
     }
 }
 
+
 //driver code
 //initializing both scores to zero
 let playerScore = 0;
