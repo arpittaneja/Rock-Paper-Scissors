@@ -29,8 +29,9 @@ function updatePage(playerSelection) {
     const computerSelection = computerPlay();
     const result = playRound(playerSelection, computerSelection);
 
-    const resultPanel = document.querySelector(".result-panel");
-    resultPanel.innerHTML = result;
+    console.log("Player Selection: " + playerSelection);
+    console.log("Computer Selection: " + computerSelection);
+    resultPanel.textContent = result;
 
     if (result.startsWith("You Win!")) {
         playerScore++;
@@ -62,6 +63,12 @@ function updatePage(playerSelection) {
         console.log("stop");
         playAgain.style.display = 'block';
         disableSelectionButtons();
+        if (playerScore > computerScore) {
+            resultPanel.textContent = "You Win This Match";
+        }
+        else {
+            resultPanel.textContent = "You Lose This Match";
+        }
     }
 }
 
@@ -76,6 +83,7 @@ function anotherGame() {
     playerCounter.textContent = playerScore;
     computerCounter.textContent = computerScore;
     playAgain.style.display = 'none';
+    resultPanel.textContent = "";
     enableSelectionButtons();
 }
 
@@ -96,6 +104,10 @@ let roundNumber = 1;
 
 //selects an array of all buttons
 const buttons = Array.from(document.querySelectorAll(".selection"));
+
+
+
+const resultPanel = document.querySelector(".result-panel");
 
 const playerCounter = document.querySelector("div .player-score .player-score-box");
 
