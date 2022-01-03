@@ -4,7 +4,7 @@ function computerPlay() {
 
     let choiceArray = ["rock", "paper", "scissors"]; //array of all possible choices
 
-    let computerPlay = choiceArray[randInt]; //conversion of random number to corresponding choice
+    let computerPlay = choiceArray[randInt]; //generate randomized element from the array
     return computerPlay;
 }
 
