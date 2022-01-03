@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    padding-top: 20px;
+    ;
+    text-align: center;
+    font-size: 50px;
+    border: 1px solid purple;
+}
+
+.result {
+    padding: 70px 0;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    margin: 15px 0;
+}
+
+.result .player-score,
+.result .computer-score {
+    border: 1px solid red;
+    min-height: 200px;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.selection {
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0;
+}
+
+.selection .rock,
+.selection .paper,
+.selection .scissors {
+    min-height: 100px;
+    min-width: 100px;
+}
