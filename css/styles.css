@@ -3,31 +3,39 @@
 }
 
 body {
-    padding: 0px;
     margin: 0px;
-    background-image: url("img/rock.png");
+    /* background-image: url(../img/background1.png); */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 100vh;
 }
 
 header {
+    background-color: rgb(247, 245, 127);
     padding: 20px 0px;
     text-align: center;
     font-size: 50px;
-    border: 1px solid purple;
-    background-color: rgb(255, 253, 152);
+    /* border: 1px solid purple; */
     font-family: 'EB Garamond', serif;
     font-weight: bold;
+    flex-grow: 1;
 }
 
-.result {
+.scores {
+    background-color: rgb(255, 255, 144);
     padding: 20px 0;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-evenly;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    flex-grow: 1;
 }
 
-.result .player-score,
-.result .computer-score {
-    border: 1px solid red;
+.scores .player-score,
+.scores .computer-score {
+    background-color: rgb(248, 207, 250);
+    border: 4px outset rgb(136, 136, 60);
     border-radius: 15%;
     height: 200px;
     width: 200px;
@@ -37,88 +45,126 @@ header {
     align-items: center;
 }
 
-.player-score-box,
+.player-score-number,
 .text,
-.computer-score-box {
+.computer-score-number {
     text-align: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-size: 24px;
 }
 
-.player-score-box,
-.computer-score-box {
+.player-score-number,
+.computer-score-number {
     font-size: 48px;
 }
 
-.again{
-    border: 1px solid red;
+.again {
+    /* border: 1px solid red; */
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: rgb(252, 252, 174);
+    flex-grow: 1;
+}
+
+.play-again {
+    height: 60px;
+    width: 140px;
+    background-color: rgb(255, 240, 191);
+    display: block;
+    border-radius: 10px;
+}
+
+.result {
+    background-color: rgb(255, 255, 204);
+    /* border: 1px solid pink; */
+    min-height: 150px;
+    min-width: 30px;
+    font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
-
-}
-
-.play-again{
-    height: 40px;
-    width: 180px;
-    display: none;
+    flex-grow: 1;
 }
 
 .selections {
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
+    background-color: rgb(252, 252, 174);
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-evenly;
-    padding: 30px 0;
+    flex-grow: 1;
 }
 
 .selection {
-    min-height: 100px;
-    min-width: 100px;
-}
-
-.result-panel {
-    margin: 30px;
-    border: 1px solid pink;
-    min-height: 100px;
-    min-width: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.button {
-    border-top: thick inset #e2ff91;
     border: thick ridge #e2ff91;
     border-radius: 10px;
-    height: 200px;
-    width: 200px;
+    min-height: 200px;
+    min-width: 200px;
+    background-size: cover;
 }
 
-.button#rock {
+.selection#rock {
     background-image: url("../img/rock.png");
-    background-size: cover;
 }
 
-.button#paper {
+.selection#paper {
     background-image: url("../img/paper.png");
-    background-size: cover;
 }
 
-button#scissors {
+.selection#scissors {
     background-image: url("../img/scissors.png");
-    background-size: cover;
 }
 
-.play-again{
-    background-color: rgb(255, 240, 191);
-}
-button:hover {
+.selection:hover {
     transform: scale(1.04, 1.04);
 }
 
-button:active {
-    box-shadow: 0 10px 14px #666;
+.selection:active {
+    box-shadow: 7px 7px grey;
     transform: scale(0.98, .98);
 }
 
+.play-again:hover {
+    transform: scale(1.07, 1.07);
+}
+
+.play-again:active {
+    box-shadow: 4px 4px grey;
+    transform: scale(0.98, .98);
+}
+
+::selection {
+    color: rgb(255, 255, 0);
+    background: rgb(253, 143, 161);
+}
+
+footer {
+    background-color: rgb(255, 255, 219);
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(255, 126, 147)
+}
+
+.scores .player-score:hover,
+.scores .computer-score:hover {
+    background-color: rgb(255, 195, 205);
+    border: 4px inset rgb(136, 136, 60);
+}

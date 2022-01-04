@@ -106,9 +106,7 @@ let roundNumber = 1;
 const buttons = Array.from(document.querySelectorAll(".selection"));
 
 
-
 const resultPanel = document.querySelector(".result-panel");
-
 const playerCounter = document.querySelector("div .player-score .player-score-box");
 
 
