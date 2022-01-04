@@ -44,7 +44,7 @@ header {
     border: 4px outset rgb(136, 136, 60);
     border-radius: 15%;
     height: 200px;
-    width: 300px;
+    min-width: 200px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
@@ -88,7 +88,6 @@ header {
     height: 60px;
     width: 160px;
     font-size: 20px;
-    ;
     font-weight: bold;
     border: thick groove #d8ff6e;
     border-radius: 10px;
@@ -127,9 +126,11 @@ header {
 .selection {
     border: thick groove #e2ff91;
     border-radius: 10px;
-    min-width: 30vw;
-    min-height: 30vw;
-    background-size: contain;
+    min-height: 200px;
+    min-width: 200px;
+    width: auto;
+    height: auto;
+    background-size: cover;
 }
 
 .selection#rock {
