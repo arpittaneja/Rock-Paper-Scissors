@@ -27,9 +27,12 @@ header {
     padding: 20px 0;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 20px 60px;
     /* border: 1px solid black; */
     flex-grow: 1;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
 }
 
 .scores .player-score,
@@ -62,18 +65,27 @@ header {
     /* border: 1px solid red; */
     min-height: 80px;
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     background-color: rgb(252, 252, 174);
     flex-grow: 1;
 }
 
+.start-text {
+    /* border: 1px solid red; */
+    font-family: 'EB Garamond', serif;
+    position: absolute;
+    font-size: 42px;
+}
+
 .play-again {
+    background-color: rgb(255, 240, 191);
     height: 60px;
     width: 140px;
-    background-color: rgb(255, 240, 191);
-    display: block;
+    border: thick groove #d8ff6e;
     border-radius: 10px;
+    display: none;
 }
 
 .result {
@@ -86,21 +98,28 @@ header {
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+    font-family: 'Graduate', cursive;
+    font-weight: bold;
+}
+
+.result p {
+    text-align: center;
 }
 
 .selections {
     /* border: 1px solid gray; */
     background-color: rgb(252, 252, 174);
-    padding-top: 20px;
+    padding-top: 5px;
     padding-bottom: 20px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 20px 60px;
     flex-grow: 1;
 }
 
 .selection {
-    border: thick ridge #e2ff91;
+    border: thick groove #e2ff91;
     border-radius: 10px;
     min-height: 200px;
     min-width: 200px;
@@ -117,6 +136,19 @@ header {
 
 .selection#scissors {
     background-image: url("../img/scissors.png");
+}
+
+footer {
+    background-color: rgb(255, 255, 219);
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+footer a {
+    text-decoration: none;
 }
 
 .selection:hover {
@@ -140,18 +172,6 @@ header {
 ::selection {
     color: rgb(255, 255, 0);
     background: rgb(253, 143, 161);
-}
-
-footer {
-    background-color: rgb(255, 255, 219);
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    justify-content: center;
-}
-
-footer a {
-    text-decoration: none;
 }
 
 a:visited {

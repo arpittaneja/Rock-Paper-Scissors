@@ -106,12 +106,13 @@ let roundNumber = 1;
 const buttons = Array.from(document.querySelectorAll(".selection"));
 
 
-const resultPanel = document.querySelector(".result-panel");
-const playerCounter = document.querySelector("div .player-score .player-score-box");
+const resultPanel = document.querySelector(".result p");
+const playerCounter = document.querySelector("div .player-score .player-score-number");
 
-
+const startText = document.querySelector(".start-text");
 //applies eventListener to all the buttons
 buttons.forEach(button => button.addEventListener("click", function (button) {
+    startText.style.display = "none";
     const playerSelection = button.target.id;
     updatePage(playerSelection);
 }));
@@ -119,5 +120,5 @@ buttons.forEach(button => button.addEventListener("click", function (button) {
 const playAgain = document.querySelector('.again .play-again');
 playAgain.addEventListener('click', anotherGame);
 
-const computerCounter = document.querySelector("div .computer-score .computer-score-box");
+const computerCounter = document.querySelector("div .computer-score .computer-score-number");
 
