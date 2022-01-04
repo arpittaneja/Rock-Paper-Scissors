@@ -123,8 +123,8 @@ header {
 .selection {
     border: thick groove #e2ff91;
     border-radius: 10px;
-    min-height: 200px;
-    min-width: 200px;
+    height: 200px;
+    width: 200px;
     background-size: cover;
 }
 
