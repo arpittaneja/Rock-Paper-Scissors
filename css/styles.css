@@ -14,21 +14,24 @@ body {
 header {
     background-color: rgb(255, 255, 112);
     padding: 20px 0px;
-    text-align: center;
     font-size: 50px;
     /* border: 1px solid purple; */
     font-family: 'EB Garamond', serif;
+    text-align: center;
     font-weight: bold;
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: start;
 }
 
 .scores {
     background-color: rgb(255, 255, 153);
     padding: 20px 0;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
-    gap: 30px 60px;
+    gap: 20px 60px;
     /* border: 1px solid black; */
     flex-grow: 1;
     font-family: 'Graduate', cursive;
@@ -41,7 +44,7 @@ header {
     border: 4px outset rgb(136, 136, 60);
     border-radius: 15%;
     height: 200px;
-    width: 200px;
+    width: 300px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
@@ -77,14 +80,15 @@ header {
     text-align: center;
     font-family: 'EB Garamond', serif;
     position: absolute;
-    font-size: 32px;
+    font-size: 30px;
 }
 
 .play-again {
     background-color: rgb(255, 240, 191);
     height: 60px;
     width: 160px;
-    font-size: 20px;;
+    font-size: 20px;
+    ;
     font-weight: bold;
     border: thick groove #d8ff6e;
     border-radius: 10px;
@@ -114,7 +118,7 @@ header {
     padding-top: 5px;
     padding-bottom: 20px;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
     gap: 30px 60px;
     flex-grow: 1;
@@ -123,9 +127,9 @@ header {
 .selection {
     border: thick groove #e2ff91;
     border-radius: 10px;
-    height: 200px;
     width: 200px;
-    background-size: cover;
+    height: 200px;
+    background-size: contain;
 }
 
 .selection#rock {
