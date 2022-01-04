@@ -14,7 +14,7 @@ body {
 
 header {
     background-color: rgb(255, 255, 112);
-    padding: 0px 0px;
+    padding: 30px 0px;
     font-size: 50px;
     font-family: 'EB Garamond', serif;
     text-align: center;
@@ -105,8 +105,8 @@ header {
 .selection {
     border: thick groove #e2ff91;
     border-radius: 10px;
-    min-width: 200px;
-    min-height: 200px;
+    width: 200px;
+    height: 200px;
     background-size: contain;
 }
 
@@ -138,8 +138,6 @@ header {
     font-family: 'Bungee', cursive;
     text-align: center;
 }
-
-
 
 footer {
     background-color: rgb(255, 255, 219);
