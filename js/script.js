@@ -30,6 +30,8 @@ function updatePage(playerSelection) {
     //increments round number per click
     roundNumber++;
 
+
+    startText.style.fontSize = "45px";
     startText.textContent = `Round: ${roundNumber}`;
 
     const computerSelection = computerPlay();
