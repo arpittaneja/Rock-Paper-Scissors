@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: rgb(247, 245, 127);
+    background-color: rgb(255, 255, 112);
     padding: 20px 0px;
     text-align: center;
     font-size: 50px;
@@ -23,15 +23,15 @@ header {
 }
 
 .scores {
-    background-color: rgb(255, 255, 144);
+    background-color: rgb(255, 255, 153);
     padding: 20px 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 20px 60px;
+    gap: 30px 60px;
     /* border: 1px solid black; */
     flex-grow: 1;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Graduate', cursive;
     font-weight: bold;
 }
 
@@ -74,9 +74,10 @@ header {
 
 .start-text {
     /* border: 1px solid red; */
+    text-align: center;
     font-family: 'EB Garamond', serif;
     position: absolute;
-    font-size: 42px;
+    font-size: 32px;
 }
 
 .play-again {
@@ -98,11 +99,10 @@ header {
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    font-family: 'Graduate', cursive;
-    font-weight: bold;
 }
 
 .result p {
+    font-family: 'Bungee', cursive;
     text-align: center;
 }
 
@@ -114,7 +114,7 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 20px 60px;
+    gap: 30px 60px;
     flex-grow: 1;
 }
 
@@ -145,6 +145,7 @@ footer {
     flex-grow: 1;
     justify-content: center;
     font-family: 'Rubik', sans-serif;
+    text-align: center;
 }
 
 footer a {
