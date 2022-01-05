@@ -70,6 +70,7 @@ header {
     font-family: 'EB Garamond', serif;
     position: absolute;
     font-size: 30px;
+    min-height: 90px;
 }
 
 .play-again {

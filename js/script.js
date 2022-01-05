@@ -1,8 +1,8 @@
 //function to return randomized computer choice
 function computerPlay() {
-    const randInt = Math.floor(Math.random() * 3); //random number between 1, 2 and 3
+    const randInt = Math.floor(Math.random() * 3);
 
-    let choiceArray = ["rock", "paper", "scissors"]; //array of all possible choices
+    let choiceArray = ["rock", "paper", "scissors"];
 
     let computerPlay = choiceArray[randInt]; //generate randomized element from the array
     return computerPlay;
@@ -10,10 +10,6 @@ function computerPlay() {
 
 //function to calculate and return the outcome of each case
 function playRound(playerSelection, computerSelection) {
-    // if (playerSelection == null || playerSelection == undefined) return "Exit"; //checking if player selection is null or undefined
-
-    // playerSelection = playerSelection.toLowerCase(); //conversion of all types of inputs to lowercase
-
     if (playerSelection == computerSelection) return "Round Draw!";
     else if (playerSelection == "rock" && computerSelection == "paper") return "You Lose! Paper defeats Rock!";
     else if (playerSelection == "rock" && computerSelection == "scissors") return "You Win! Rock defeats Scissors!";
@@ -27,9 +23,7 @@ function playRound(playerSelection, computerSelection) {
 //takes in value of playerSelection and updates the whole page accordingly
 function updatePage(playerSelection) {
 
-    //increments round number per click
     roundNumber++;
-
 
     startText.style.fontSize = "45px";
     startText.textContent = `Round: ${roundNumber}`;
@@ -37,34 +31,21 @@ function updatePage(playerSelection) {
     const computerSelection = computerPlay();
     const result = playRound(playerSelection, computerSelection);
 
-    // console.log("Player Selection: " + playerSelection);
-    // console.log("Computer Selection: " + computerSelection);
-
     //updates result to the resut element
     resultPanel.textContent = result;
 
     if (result.startsWith("You Win!")) {
         playerScore++;
         playerCounter.textContent = playerScore;
-        // console.log(result);
-        // console.log("Player Score: " + playerScore);
-        // console.log("Computer Score: " + computerScore);
     }
 
     else if (result.startsWith("You Lose!")) {
         computerScore++;
         computerCounter.textContent = computerScore;
-        // console.log(result);
-        // console.log("Player Score: " + playerScore);
-        // console.log("Computer Score: " + computerScore);
     }
 
-    else if (result.startsWith("Round Draw!")) {
-        console.log(result);
-    }
 
     if (playerScore == 5 || computerScore == 5) {
-        // console.log("stop");
         disableSelectionButtons();
         startText.style.display = "none";
         playAgain.style.display = "block";
@@ -87,7 +68,6 @@ function disableSelectionButtons() {
 
 //updates the page accordingly when play again button is pressed
 function anotherGame() {
-    //reinitializes both scores to zero
     playerScore = computerScore = 0;
     roundNumber = 1;
     playAgain.style.display = "none";
@@ -108,11 +88,9 @@ function enableSelectionButtons() {
 
 
 //driver code
-//initializing both scores to zero
+
 let playerScore = 0;
 let computerScore = 0;
-
-//initializing round number to 0
 let roundNumber = 0;
 
 //selects an array of all buttons
