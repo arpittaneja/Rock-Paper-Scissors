@@ -34,7 +34,7 @@ header {
 .scores .player-score,
 .scores .computer-score {
     background-color: rgb(248, 207, 250);
-    border: 4px outset rgb(136, 136, 60);
+    border: 4px outset rgb(153, 153, 91);
     border-radius: 12%;
     height: 190px;
     width: 190px;
@@ -62,6 +62,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: rgb(252, 252, 174);
+    font-weight: bold;
     flex-grow: 1;
 }
 
@@ -98,8 +99,9 @@ header {
 .selection {
     border: thick groove #e2ff91;
     border-radius: 10px;
+    min-width: 100px;
+    min-height: 200px;
     width: 200px;
-    height: 200px;
     background-size: contain;
 }
 

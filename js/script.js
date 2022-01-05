@@ -37,11 +37,13 @@ function updatePage(playerSelection) {
     if (result.startsWith("You Win!")) {
         playerScore++;
         playerCounter.textContent = playerScore;
+
     }
 
     else if (result.startsWith("You Lose!")) {
         computerScore++;
         computerCounter.textContent = computerScore;
+
     }
 
 
@@ -52,9 +54,13 @@ function updatePage(playerSelection) {
 
         if (playerScore > computerScore) {
             resultPanel.textContent = "You Win This Match";
+            const winAudio = document.querySelector(".win");
+            winAudio.play();
         }
         else {
             resultPanel.textContent = "You Lose This Match";
+            const loseAudio = document.querySelector(".lose");
+            loseAudio.play();
         }
     }
 }
@@ -88,7 +94,6 @@ function enableSelectionButtons() {
 
 
 //driver code
-
 let playerScore = 0;
 let computerScore = 0;
 let roundNumber = 0;
@@ -109,6 +114,19 @@ const startText = document.querySelector(".start-text");
 //applies eventListener to all the selection buttons
 buttons.forEach(button => button.addEventListener("click", function (button) {
     const playerSelection = button.target.id;
+    if (playerSelection == "rock") {
+        const rockAudio = document.querySelector(".rock");
+        rockAudio.play();
+    }
+
+    else if (playerSelection === "paper") {
+        const paperAudio = document.querySelector(".paper");
+        paperAudio.play();
+    }
+    else {
+        const scissorsAudio = document.querySelector(".scissors");
+        scissorsAudio.play();
+    }
     updatePage(playerSelection);
 }));
 
