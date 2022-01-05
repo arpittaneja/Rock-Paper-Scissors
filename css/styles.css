@@ -2,11 +2,20 @@
     box-sizing: border-box;
 }
 
+html{
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
 body {
     margin: 0px;
+    padding: 0px;
     display: flex;
     flex-flow: column nowrap;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
 }
 
 header {
@@ -25,7 +34,7 @@ header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    gap: 0px 30px;
+    gap: 0px 50px;
     flex-grow: 1;
     font-family: 'Graduate', cursive;
     font-weight: bold;
@@ -48,7 +57,8 @@ header {
 .text,
 .computer-score-number {
     text-align: center;
-    font-size: 24px;
+    font-size: 25px;
+    word-break: break-all;
 }
 
 .player-score-number,
@@ -57,7 +67,8 @@ header {
 }
 
 .again {
-    min-height: 80px;
+    min-height: 100px;
+    max-height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,8 +81,7 @@ header {
     text-align: center;
     font-family: 'EB Garamond', serif;
     position: absolute;
-    font-size: 30px;
-    min-height: 90px;
+    font-size: 32px;
 }
 
 .play-again {
@@ -92,17 +102,18 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 30px 60px;
+    gap: 30px 50px;
     flex-grow: 1;
 }
 
 .selection {
     border: thick groove #e2ff91;
     border-radius: 10px;
-    min-width: 100px;
-    min-height: 200px;
+    height: 200px;
     width: 200px;
-    background-size: contain;
+    min-width: 100px;
+    background-size: cover;
+    background-position: center;
 }
 
 .selection#rock {
@@ -119,7 +130,7 @@ header {
 
 .result {
     background-color: rgb(255, 255, 204);
-    min-height: 150px;
+    min-height: 140px;
     min-width: 30px;
     font-size: 30px;
     display: flex;

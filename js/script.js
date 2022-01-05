@@ -116,15 +116,18 @@ buttons.forEach(button => button.addEventListener("click", function (button) {
     const playerSelection = button.target.id;
     if (playerSelection == "rock") {
         const rockAudio = document.querySelector(".rock");
+        rockAudio.currentTime = 0;
         rockAudio.play();
     }
 
     else if (playerSelection === "paper") {
         const paperAudio = document.querySelector(".paper");
+        paperAudio.currentTime = 0;
         paperAudio.play();
     }
     else {
         const scissorsAudio = document.querySelector(".scissors");
+        scissorsAudio.currentTime = 0;
         scissorsAudio.play();
     }
     updatePage(playerSelection);
